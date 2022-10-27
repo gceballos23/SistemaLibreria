@@ -50,7 +50,7 @@ export  class Libreria {
         try{ 
             for( i; i<this.clientes.length; i++){
                 if(pTitulo === this.libros[i].getTitulo()){
-                    return this.libros[i]
+                    return this.libros[i];
                     break;
                 }
 
@@ -157,7 +157,7 @@ export  class Libreria {
 
     }
 
-    public buscarLibroComprado(pCliente : Cliente, pLibro : Libro) : boolean {
+    public buscarLibroComprado(pCliente : Cliente, pLibro : Articulo) : boolean {
         let comprado : boolean = false;
            try{ 
             for(let i:number=0; i<this.ventas.length; i++){
