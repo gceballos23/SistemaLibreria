@@ -14,7 +14,7 @@ export  class Venta {
         if (pCliente.getDescuento() === 0){
             this.precio = pLibro.getPrecio()
         }else{
-            this.precio = pLibro.getPrecio() / pCliente.getDescuento();
+            this.precio = pLibro.getPrecio() -(pLibro.getPrecio() * pCliente.getDescuento()/100);
         }
      
     }

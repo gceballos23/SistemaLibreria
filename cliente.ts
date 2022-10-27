@@ -6,10 +6,25 @@ export  class Cliente extends Persona{
     private autoresFavoritos: Persona[];
     private generoFavoritos: string[];
     
-    constructor(pNombre : string, pDni : number, pdireccion : string, pdescuento : number){ 
+    constructor(pNombre : string, pDni : number, pdireccion : string, pdescuento : number,pAutores:Persona[],pGenero:string[]){ 
         super(pNombre,pDni);
         this.direccion = pdireccion;
-        this.descuento = pdescuento;
+        switch(pdescuento) {
+            case 1:
+              this.descuento = 10;
+              break;
+            case 2:
+                this.descuento = 15;
+              break;
+            case 3:
+                this.descuento = 30;
+               break;  
+            default:
+                this.descuento = 0;
+        }
+
+        this.autoresFavoritos = pAutores;
+        this.generoFavoritos = pGenero
     }
 
     public getDireccion():string{
@@ -30,7 +45,7 @@ export  class Cliente extends Persona{
               this.descuento = 10;
               break;
             case 2:
-                this.descuento = 20;
+                this.descuento = 15;
               break;
             case 3:
                 this.descuento = 30;

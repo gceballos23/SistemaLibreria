@@ -22,4 +22,6 @@ export  class Persona {
     public setDni(pDni:number):void{
         this.dni = pDni;
     }
+
+
 }
