@@ -1,27 +1,25 @@
-export  class Persona { 
-    protected nombre : string;
-    protected dni : number;
-    
-    constructor(pNombre : string, pDni : number){
+export class Persona {
+    protected nombre: string;
+    protected dni: number;
+
+    constructor(pNombre: string, pDni: number) {
         this.nombre = pNombre;
         this.dni = pDni;
     }
 
-    public getNombre():string{
+    public getNombre(): string {
         return this.nombre;
     }
 
-    public setNombre(pNombre:string):void{
+    public setNombre(pNombre: string): void {
         this.nombre = pNombre;
     }
 
-    public getDni():number{
+    public getDni(): number {
         return this.dni;
     }
 
-    public setDni(pDni:number):void{
+    public setDni(pDni: number): void {
         this.dni = pDni;
     }
-
-
 }
